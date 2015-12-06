@@ -21,9 +21,5 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
         $this->load->view('welcome_message');
-        echo ENVIRONMENT;
-        $res = $this->db->query("select * from prueba");
-        echo "<br/>";
-        var_dump($res->result_array());
 	}
 }
