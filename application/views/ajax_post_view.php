@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>CodeIgniter ajax post</title>
-        <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/style.css">
+        <?= link_tag('assets/css/style.css', 'stylesheet', 'text/css') ?>
         <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans+Condensed:300|Raleway" rel="stylesheet" type="text/css">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script type="text/javascript">

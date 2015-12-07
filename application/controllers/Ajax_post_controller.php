@@ -5,7 +5,7 @@ class Ajax_post_controller extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
-        $this->load->helper(array('url', 'form'));
+        $this->load->helper(array('url', 'form', 'html'));
     }
 
     // Show view Page
@@ -21,7 +21,6 @@ class Ajax_post_controller extends CI_Controller {
         );
 
         //Either you can print value or you can send value to database
-        header('Access-Control-Allow-Origin: *');
         echo json_encode($data);
     }
 }
