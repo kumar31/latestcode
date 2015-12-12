@@ -6,6 +6,8 @@
 	},
 	"require-dev": {
 		"mikey179/vfsStream": "1.1.*",
-        "heroku/heroku-buildpack-php": "*"
+		"kenjis/ci-phpunit-test": "^0.10.0",
+        "heroku/heroku-buildpack-php": "*",
+		"phpunit/phpunit": "4.*"
 	}
 }
