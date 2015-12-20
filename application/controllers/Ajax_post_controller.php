@@ -1,5 +1,17 @@
 <?php if ( ! defined('BASEPATH') ) exit('No direct script access allowed');
 
+/*
+ * IMPORTANTE: Para que funcionen las peticiones Ajax, el nombre de dominio
+ * no debe cambiar. Por ejemplo, no funciona si el programa se ejecuta
+ * sobre ci.local pero envía una petición Ajax a www.ci.local. Para que
+ * funcione correctamente, lo mejor es hacer que el programa se ejecute
+ * siempre desde ci.local, y para ello, añadimos en public/.htaccess las
+ * siguientes líneas para quitar las www. del nombre de dominio:
+ *
+ *   RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+ *   RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+ *
+ */
 class Ajax_post_controller extends CI_Controller {
 
     public function __construct()
