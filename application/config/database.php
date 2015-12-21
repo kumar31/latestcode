@@ -74,12 +74,12 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'ricardo',
-	'password' => 'ricardo',
-	'database' => 'datos',
-	'dbdriver' => 'postgre',
+	'dsn' => 'pgsql:host=localhost;user=ricardo;password=ricardo;dbname=datos',
+	'hostname' => '',
+	'username' => NULL, // IMPORTANTE: Poner a NULL si se indica en el dsn
+	'password' => NULL, // IMPORTANTE: Poner a NULL si se indica en el dsn
+	'database' => '',
+	'dbdriver' => 'pdo',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
