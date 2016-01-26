@@ -13,7 +13,7 @@
                     var password = $("input#pwd").val();
                     $.ajax({
                         type: "POST",
-                        url: "<?= base_url() ?>" + "index.php/ajax_post_controller/user_data_submit",
+                        url: "<?= site_url("ajax_post_controller/user_data_submit") ?>",
                         dataType: 'json',
                         data: {name: user_name, pwd: password},
                         success: function(res) {
@@ -74,4 +74,3 @@
         </div>
     </body>
 </html>
-

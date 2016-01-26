@@ -1,5 +1,5 @@
 <?php if ( ! defined('BASEPATH') ) exit('No direct script access allowed');
-header('Access-Control-Allow-Origin: *');
+#header('Access-Control-Allow-Origin: *');
 /*
  * IMPORTANTE: Para que funcionen las peticiones Ajax, el nombre de dominio
  * no debe cambiar. Por ejemplo, no funciona si el programa se ejecuta
@@ -12,7 +12,7 @@ header('Access-Control-Allow-Origin: *');
  *   RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
  *
  */
-class Ajax_post_controller extends MY_Controller {
+class Ajax_post_controller extends CI_Controller {
 
     public function __construct()
     {
@@ -37,4 +37,3 @@ class Ajax_post_controller extends MY_Controller {
         echo json_encode($data);
     }
 }
-
