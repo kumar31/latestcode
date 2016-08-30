@@ -73,13 +73,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
+define('DB_HOST', getenv( 'DB_HOST' ));
+define('DB_DATABASE', getenv( 'DB_NAME' ));
+define('DB_USER', getenv( 'DB_USER' ));
+define('DB_PASS', getenv( 'DB_PASS' ));
 $db['default'] = array(
-	'dsn' => 'pgsql:host=localhost;user=ricardo;password=ricardo;dbname=datos',
-	'hostname' => '',
-	'username' => NULL, // IMPORTANTE: Poner a NULL si se indica en el dsn
-	'password' => NULL, // IMPORTANTE: Poner a NULL si se indica en el dsn
-	'database' => '',
-	'dbdriver' => 'pdo',
+	'dsn'	=> '',
+	'hostname' => constant("DB_HOST"),
+	'username' => constant("DB_USER"),
+	'password' => constant("DB_PASS"),
+	'database' => constant("DB_DATABASE"),
+	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
